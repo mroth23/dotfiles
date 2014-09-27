@@ -1,0 +1,25 @@
+[user]
+        name = Moritz Roth
+        email = moritz.roth11@gmail.com
+[core]
+        editor = emacsclient -t -a vim
+        whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[push]
+        default = simple
+[color]
+        ui = auto
+[diff]
+        tool = kdiff3
+[alias]
+        aa = add .
+        au = add -u
+        ap = add -p
+        amend = commit --amend
+        co = checkout
+        fp = format-patch
+        ls = ls-files
+        st = status -s -b
+        # Reset to commit before time $1, on branch $2
+        resetb = "!f() { git reset --hard `git rev-list -n 1 --before=\"$1\" $2`; }; f"
+        ri = rebase -i
+        up = !git svn fetch && git svn rebase

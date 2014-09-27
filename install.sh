@@ -16,9 +16,7 @@ echo "Setting up symlinks in ~..."
 cd ~
 ln -s ./src/oh-my-zsh .oh-my-zsh
 ln -s ./src/prelude .emacs.d
-
-# Copy dotfiles
-echo "Copying dotfiles..."
-cp $DIR/zshrc ~/.zshrc
+ln -s $DIR/zshrc .zshrc
+ln -s $DIR/gitconfig .gitconfig
 
 echo "Done!"
