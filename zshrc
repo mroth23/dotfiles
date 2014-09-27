@@ -54,6 +54,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias ping='ping -c4'
 alias vim='emacsclient -t -a vim'
+alias em='emacsclient -t -a vim'
 
 # Options
 setopt inc_append_history
