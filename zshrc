@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras emacs history common-aliases cabal zsh-syntax-highlighting)
+plugins=(git git-extras emacs history common-aliases cabal zsh-syntax-highlighting extract)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -55,6 +55,8 @@ source $ZSH/oh-my-zsh.sh
 alias ping='ping -c4'
 alias vim='emacsclient -t -a vim'
 alias em='emacsclient -t -a vim'
+alias fullhostname='host -TtA $(hostname -s)'
+alias ls='ls -lahG'
 
 # Options
 setopt inc_append_history
