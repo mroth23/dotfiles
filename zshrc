@@ -88,3 +88,10 @@ setopt share_history
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Mac OSX specific stuff
+alias ls="ls -lahG"
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export TOOL_DIR="/Users/mroth/projects/software-reliability-cw2/srtool/tool"
+export PATH=/Users/mroth/Applications/z3-4.3.3.005bb82a1751-x64-osx-10.9.2/bin:/Users/mroth/perl5/bin:$PATH
+eval $(thefuck --alias)
