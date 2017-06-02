@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras emacs history common-aliases cabal zsh-syntax-highlighting extract chucknorris colorize command-not-found safe-paste thefuck zsh_reload)
+plugins=(brew cabal chucknorris colorize command-not-found common-aliases django emacs extract git git-extras history history-substring-search safe-paste sudo thefuck zsh-autosuggestions zsh-com zsh-completions zsh-syntax-highlighting zsh_reload)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,8 +53,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias ping='ping -c4'
-alias vim='emacsclient -t -a vim'
-alias em='emacsclient -t -a vim'
+alias vim='emacsclient -t'
+alias em='emacsclient -t'
+alias ec='emacsclient -c'
 alias fullhostname='host -TtA $(hostname -s)'
 alias ls='ls -lahG'
 
@@ -62,7 +63,7 @@ alias ls='ls -lahG'
 setopt inc_append_history
 setopt share_history
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/opt/local/share/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -95,3 +96,4 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 export TOOL_DIR="/Users/mroth/projects/software-reliability-cw2/srtool/tool"
 export PATH=/Users/mroth/Applications/z3-4.3.3.005bb82a1751-x64-osx-10.9.2/bin:/Users/mroth/perl5/bin:$PATH
 eval $(thefuck --alias)
+fpath=(/usr/local/share/zsh-completions $fpath)
