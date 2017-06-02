@@ -94,6 +94,7 @@ export MANPATH="/opt/local/share/man:$MANPATH"
 alias ls="ls -lahG"
 export JAVA_HOME="$(/usr/libexec/java_home)"
 export TOOL_DIR="/Users/mroth/projects/software-reliability-cw2/srtool/tool"
-export PATH=/Users/mroth/Applications/z3-4.3.3.005bb82a1751-x64-osx-10.9.2/bin:/Users/mroth/perl5/bin:$PATH
+export PATH=/Users/mroth/Applications/z3-4.3.3.005bb82a1751-x64-osx-10.9.2/bin:/Users/mroth/perl5/bin:/opt/local/bin:/opt/local/sbin:$PATH
 eval $(thefuck --alias)
+
 fpath=(/usr/local/share/zsh-completions $fpath)
