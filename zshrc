@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras emacs history common-aliases cabal zsh-syntax-highlighting extract chucknorris colorize command-not-found safe-paste thefuck zsh_reload)
+plugins=(cabal chucknorris colorize command-not-found common-aliases django emacs extract git git-extras history history-substring-search safe-paste sudo thefuck zsh-autosuggestions zsh-com zsh-completions zsh-syntax-highlighting zsh_reload)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,16 +53,17 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias ping='ping -c4'
-alias vim='emacsclient -t -a vim'
-alias em='emacsclient -t -a vim'
+alias vim='emacsclient -t'
+alias em='emacsclient -t'
+alias ec='emacsclient -c'
 alias fullhostname='host -TtA $(hostname -s)'
-alias ls='ls -lahG'
+alias ls='ls -lah --color'
 
 # Options
 setopt inc_append_history
 setopt share_history
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/opt/local/share/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -88,3 +89,5 @@ setopt share_history
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+fpath=(/usr/local/share/zsh-completions $fpath)
