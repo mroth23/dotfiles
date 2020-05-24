@@ -48,6 +48,7 @@ ZSH_THEME="robbyrussell"
 plugins=(zsh-syntax-highlighting brew cabal chucknorris colorize command-not-found common-aliases django emacs extract git git-extras history history-substring-search sudo thefuck zsh-autosuggestions zsh-completions zsh_reload)
 
 source $ZSH/oh-my-zsh.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 # User configuration
 
@@ -98,3 +99,7 @@ export PATH=/Users/mroth/Applications/z3-4.3.3.005bb82a1751-x64-osx-10.9.2/bin:/
 eval $(thefuck --alias)
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+alias zappashell3='docker run -ti -e AWS_PROFILE=zappa -v $(pwd):/var/task -v ~/.aws/:/root/.aws  --rm lambci/lambda:build-python3.6 bash'
+
+export PYENV_ROOT=/usr/local/opt/pyenv
+eval "$(pyenv init -)"

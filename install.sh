@@ -22,6 +22,7 @@ cd ~
 ln -s ./src/oh-my-zsh .oh-my-zsh
 ln -s ./src/prelude .emacs.d
 ln -s $DIR/zshrc .zshrc
+ln -s $DIR/zshenv .zshenv
 ln -s $DIR/gitconfig .gitconfig
 
 echo "Done!"

@@ -1,6 +1,6 @@
 [user]
         name = Moritz Roth
-        email = moritz@gmx.li
+        email = moritz@mroth.io
 [core]
         editor = emacsclient -t -a vim
         whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
@@ -23,3 +23,7 @@
         resetb = "!f() { git reset --hard `git rev-list -n 1 --before=\"$1\" $2`; }; f"
         ri = rebase -i
         up = !git svn fetch && git svn rebase
+[github]
+	user = mroth23
+[url "git@github.com:"]
+	insteadOf = https://github.com/
